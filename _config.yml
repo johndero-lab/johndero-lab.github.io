@@ -1,0 +1,58 @@
+# Site metadata
+title: Sunday John Oluwadero, PhD
+email: johndero@udel.edu
+description: "Researcher in social policy, resilience governance, program evaluation, and community wellbeing"
+url: "https://johndero-lab.github.io"
+baseurl: ""
+lang: en
+
+# Author/Owner
+author:
+  name: Sunday John Oluwadero
+  url: https://johndero-lab.github.io
+
+# Social profiles
+social:
+  email: johndero@udel.edu
+  linkedin: johnoluwadero
+  github: johndero-lab
+
+# Theme
+theme: minima
+markdown: kramdown
+paginate: 10
+
+# Plugins
+plugins:
+  - jekyll-scholar
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+  posts:
+    output: true
+
+# Scholar settings (for BibTeX)
+scholar:
+  style: apa
+  locale: en
+  sort_by: year
+  order: descending
+  source: _bibliography
+  bibliography: references.bib
+  bibliography_template: bibliography
+  relative_citation_filename: true
+
+# Exclude files from Jekyll build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
+  - README.md
+  - node_modules/
+  - package.json
