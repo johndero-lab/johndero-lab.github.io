@@ -3,16 +3,18 @@ layout: default
 ---
 
 <section class="hero">
-    <div class="hero-content">
-        <div class="profile-section">
-            {% if site.author.image %}
-            <img src="{{ site.author.image | relative_url }}" alt="{{ site.title }}" class="profile-photo">
-            {% endif %}
-            <h1>{{ site.author.name }}</h1>
-            <p class="tagline">{{ site.description }}</p>
-            <div class="cta-buttons">
-                <a href="{{ '/assets/cv.pdf' | relative_url }}" class="btn btn-primary" download>Download CV</a>
-                <a href="{{ '/pages/contact' | relative_url }}" class="btn btn-secondary">Get in Touch</a>
+    <div class="container">
+        <div class="hero-content">
+            <div class="profile-section">
+                {% if site.author.image %}
+                <img src="{{ site.author.image }}" alt="{{ site.author.name }}" class="profile-photo">
+                {% endif %}
+                <h1>{{ site.author.name }}</h1>
+                <p class="tagline">{{ site.description }}</p>
+                <div class="cta-buttons">
+                    <a href="/files/cv.pdf" class="btn btn-primary" download>Download CV</a>
+                    <a href="/pages/contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
             </div>
         </div>
     </div>
@@ -22,27 +24,28 @@ layout: default
     <div class="container">
         <h2>About</h2>
         <p>{{ site.author.bio | truncatewords: 50 }}</p>
-        <a href="{{ '/pages/about' | relative_url }}" class="read-more">Read Full Bio →</a>
+        <a href="/pages/about" class="read-more">Read Full Bio →</a>
     </div>
 </section>
 
 <section class="highlights">
     <div class="container">
+        <h2>Key Areas</h2>
         <div class="highlights-grid">
             <div class="highlight-card">
                 <h3>Research</h3>
                 <p>Advancing evaluation methodology and evidence-based policy</p>
-                <a href="{{ '/pages/research' | relative_url }}">Explore →</a>
+                <a href="/pages/research">Explore →</a>
             </div>
             <div class="highlight-card">
                 <h3>Publications</h3>
                 <p>Access peer-reviewed research and working papers</p>
-                <a href="{{ '/pages/publications' | relative_url }}">View →</a>
+                <a href="/pages/publications">View →</a>
             </div>
             <div class="highlight-card">
                 <h3>Impact</h3>
                 <p>Policy influence and social impact in practice</p>
-                <a href="{{ '/pages/impact' | relative_url }}">Learn More →</a>
+                <a href="/pages/impact">Learn More →</a>
             </div>
         </div>
     </div>
