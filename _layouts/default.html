@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="{{ site.author.name }}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+    {% seo %}
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+            </div>
+            <ul class="nav-menu">
+                {% for item in site.data.navigation.nav_items %}
+                <li><a href="{{ item.url | relative_url }}" class="nav-link{% if page.url == item.url %} active{% endif %}">{{ item.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            {{ content }}
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 {{ site.author.name }}. All rights reserved.</p>
+            <div class="footer-links">
+                {% if site.social.email %}
+                <a href="mailto:{{ site.social.email }}">Email</a>
+                {% endif %}
+                {% if site.social.linkedin %}
+                <a href="https://www.linkedin.com/in/{{ site.social.linkedin }}/">LinkedIn</a>
+                {% endif %}
+                {% if site.social.github %}
+                <a href="https://github.com/{{ site.social.github }}">GitHub</a>
+                {% endif %}
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ '/assets/main.js' | relative_url }}"></script>
+</body>
+</html>

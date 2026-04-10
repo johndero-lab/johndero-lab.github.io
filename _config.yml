@@ -10,6 +10,8 @@ lang: en
 author:
   name: Sunday John Oluwadero
   url: https://johndero-lab.github.io
+  image: /images/profile.jpg
+  bio: "Researcher and policy analyst specializing in social policy, resilience governance, program evaluation, and community wellbeing. Expertise in mixed-methods evaluation, causal inference, and translating research into policy impact."
 
 # Social profiles
 social:
